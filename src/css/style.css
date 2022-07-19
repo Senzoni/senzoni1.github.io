@@ -75,7 +75,7 @@
 
 	.loaded .preloader {
 		display: none;
-	}*/
+	}
 
 	nav{
 		background:white;
@@ -133,6 +133,9 @@
 		display: inline-block;
 		text-decoration: none;
 	}
+	.menu li a.active{
+		color: red;
+	}/*
 	.menu li a:visited{
 		color: #000;
 	}
@@ -142,7 +145,7 @@
 	}
 	.menu li a:active{
 		transform: scale(1.1);
-	}
+	}*/
 	.main{
 		width: 100%;
 		height: 100%;
@@ -286,12 +289,19 @@
 		}
 	}
 
-	.Two{
+	.About{
 		background: url(../img/3.jpg) center/cover no-repeat;
 		height: 600px;
 
 	}
-	.Two h2{
+	.element-animation{
+		opacity: 0;
+	}
+	.element-animation.show-animation{
+		opacity: 1;
+		transition: opacity 3s;
+	}
+	.About h2{
 		color: #000;
 		-webkit-text-stroke: 1px #fff;
 		font-style: oblique;
@@ -305,7 +315,7 @@
 
 
 	}
-	.Two p{
+	.About p{
 		font-size: 16px;
 		color: #fff;
 		padding-top: 65px;
@@ -314,13 +324,15 @@
 		text-align: center;
 		letter-spacing: 0.5px;	
 		line-height: 20px;
-		-webkit-animation: Twop 4.4s ease forwards;
-		-o-animation: Twop 4.4s ease forwards;
-		animation: Twop	4.4s ease forwards;
+		/*
+		-webkit-animation: Aboutp 4.4s ease forwards;
+		-o-animation: Aboutp 4.4s ease forwards;
+		animation: Aboutp	4.4s ease forwards;
 		opacity: 0;
+		*/
 	}
 
-	.Two input{
+	.About input{
 		color: #fff;
 		text-align: center;
 		border: 4px solid #fff;
@@ -331,23 +343,25 @@
 		font-size: 16px;
 		transition: all 0.2s;
 		transform: scale(1);
+		/*
 		-webkit-animation: th 6.4s ease forwards;
 		-o-animation: th 6.4s ease forwards;
 		animation: th 6.4s ease forwards;
 		opacity: 0;
+		*/
 
 	}
 
 	
-	.Two input:hover{
+	.About input:hover{
 		background: #fff;
 		color: #000;	
 	}
-	.Two input:active{
+	.About input:active{
 		transform: scale(1.1);
 	}
 
-	@keyframes Two{
+	@keyframes About{
 		from{
 			opacity: 0;
 			
@@ -357,7 +371,8 @@
 
 		}
 	}
-	@keyframes Twop{
+	/*
+	@keyframes Aboutp{
 		from{
 			opacity: 0;
 			margin-left: -440px;	
@@ -376,14 +391,14 @@
 			opacity: 1;
 			margin-left: 0px;			
 		}
-	}
-	.Two input:hover{
+	}*/
+	.About input:hover{
 		background: #fff;
 		color: #000;	
 	}
 
 
-	.Two p:nth-child(2){
+	.About p:nth-child(2){
 		animation-delay: 2s;
 	}
 	.Three{
@@ -511,13 +526,14 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background:  url(../img/select.png) 98% 54%/auto no-repeat, #eee;
+    
 }
 
 .days, .price{
     margin-bottom: 0px;
     font-size: 21px;
     color:#fff;
+
     
 }
 .calculator_footer p{
@@ -531,10 +547,14 @@
     font-size: 29px;
     float: right;
 }
+.clear{
+	height: 50px;
+}
 
 .calculator_footer button{
     width: 200px;
 }
+
 /*
 	.Five{
 		background: url(../img/3.jpg) center/cover no-repeat;
