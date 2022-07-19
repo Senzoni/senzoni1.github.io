@@ -11,11 +11,14 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="css/preloader.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-
-  <div class="preloader">
+<body><!--
+<div class="loaderArea">
+  <div class="loader"></div>
+</div>-->
+ <!-- <div class="preloader">
     <div class="preloader__row">
       <div class="preloader__item"></div>
       <div class="preloader__item"></div>
@@ -29,7 +32,7 @@
         document.body.classList.remove('loaded_hiding');
       }, 900);
     }
-  </script>
+  </script>-->
   <header>
 
     <nav>
@@ -46,7 +49,7 @@
                   <li><a class = nav__link href="#">Обо мне</a></li>
                   <li><a class = nav__link href="#">Услуги</a></li>
                   <li><a class = nav__link href="#">Прайс</a></li>
-                  <li><a class = nav__link href="#">Контакты</a></li>
+                  <li><a class = nav__link href="#Contact">Контакты</a></li>
                 </ul> </div>
               </div>
               <div class="col-5 d-flex d-lg-none flex-column justify-content-center align-items-end">
@@ -160,8 +163,52 @@
 
                  
                 
+                <section class="calculator">
+            <div class="calculator_container container">
+                <h2>Расчет стоимости</h2>
+                <div class="calculator_inner">
+                    <h3>Тип Сайта</h3>
+                    <select id="select1" class="mySelect" name="type" id="typeSite">
+                        <option value="0" days="0" selected disabled>Выберите пункт</option>
+                        <option value="2000" days="3">Лэндинг</option>
+                        <option value="3000" days="4">Сайт-визитка</option>
+                        </select>
+                    <h3>Дизайн</h3>
+                    <select id="select2" class="mySelect" name="type" id="typeSite">
+                        <option value="0" days="0" selected disabled>Выберите пункт</option>
+                        <option value="1500" days="1">Шаблонный</option>
+                        <option value="3500" days="3">Уникальный</option>
+                    </select>
+                    <h3>Адаптивность</h3>
+                    <select id="select3" class="mySelect" name="type" id="typeSite">
+                        <option value="0" days="0" selected disabled>Выберите пункт</option>
+                        <option value="1000" days="1">Только ПК</option>
+                        <option value="2000" days="2">Только мобильный сайт</option>
+                        <option value="3500" days="3">ПК + Мобильный</option>
+                    </select>
+                    <hr>
+                    <div class="calculator_footer">
+                        <div class="days">
+                            <p class="text">Сроки</p>
+                            <p class="digit">0</p>
+                            <div class="clear"></div>
+                        </div>
 
-                <div class="Five">
+                        <div class="price">
+                            <p class="text">Стоимость</p>
+                            <p class="digit">0</p>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="row justify-content-center text-center">
+                            <div class="col-12 ">
+                                <button class="mx-auto">Оставить заявку</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+               <!-- <div class="Five">
                   <div class="container"> 
                       
                           <div class="Five2">
@@ -194,7 +241,7 @@
                   </div>  
                   
                 </div>
-
+-->
                 <div class="Static">
                   <div class="container h-100"> 
                     <div class="row"> 
@@ -241,7 +288,7 @@
                 </div>
               </div>
             </div>
-              <footer>
+              <footer id="Contact">
                 <div class="container"> 
                   <div class="row"> 
                       <div class="col-4"> </div>
@@ -275,6 +322,8 @@
               </div>
               </div>
               </footer>
+              <script src="js/jquery-3.6.0.min.js"></script>
               <script src="js/bootstrap.bundle.min.js"></script>
+              <script src="js/myScript.js"></script>
             </body>
             </html>
