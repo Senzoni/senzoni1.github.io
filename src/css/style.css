@@ -78,7 +78,7 @@
 	}
 
 	nav{
-		background:white;
+		background: red;
 		width: 100%;
 		height: 60px;
 		position: fixed;
@@ -101,6 +101,7 @@
 
 
 	}
+
 	main{
 		width: 100%;
 		height: 100%;		
@@ -135,7 +136,40 @@
 	}
 	.menu li a.active{
 		color: red;
-	}/*
+	}
+
+	.menu-btn{
+		display: block;
+		width: 50px;
+		height: 50px;
+		background-color: #fff;
+		border-radius: 50%;
+		position: relative;
+	}
+	.menu-btn span,
+	.menu-btn span::before,
+	.menu_btn span::after  {
+		position: absolute;
+		top: 50%;margin-top: -1px;
+		left: 50%;margin-left: -10px;
+		width: 20px;
+		height: 2px;
+		background-color: #000;
+
+	}
+
+	.menu-btn span::before,
+	.menu_btn span::after{
+		content: '';
+	}
+	.menu-btn span::before {
+		transform: translateY(-5px);
+	}
+	.menu_btn span::after {
+		transform: translateY(5px);
+	}
+
+	/*
 	.menu li a:visited{
 		color: #000;
 	}
@@ -289,7 +323,7 @@
 		}
 	}
 
-	.About{
+	.about{
 		background: url(../img/3.jpg) center/cover no-repeat;
 		height: 600px;
 
@@ -301,21 +335,100 @@
 		opacity: 1;
 		transition: opacity 3s;
 	}
-	.About h2{
+
+.about_container h2{
+    text-align: center;
+    width: 156px;
+    font-size: 30px;
+		font-weight: 800;
+		color:#000;
+		-webkit-text-stroke: 2px #fff;
+		font-style: oblique;
+    margin: 10px auto 30px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    
+}
+
+.about_container{
+    
+    padding-bottom: 100px;
+}
+
+
+.about_container hr{
+    height: 4px;
+    border: none;
+    background: #d17700;
+    width: 80px;
+    margin: 0 auto 60px;
+    opacity: 1;
+    
+}
+
+.about_container p{
+    margin-top: 24px;
+    font-size: 17px;
+    color: #fff;
+    
+}
+
+@media (max-width: 740px){
+    .about_me_container p{
+        text-align: center;
+    }
+}
+
+.about_container .secondText{
+    margin-top: 45px;
+}
+
+.about_container a{
+    display: block;
+    width: 162px;
+    height: 33px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 8px;
+    line-height: 30px;
+    margin: 40px auto 0;
+    font-size: 16px;
+    background: url(../img/input.png) 6%/auto no-repeat;
+    padding-left: 18px;
+    color: black;
+    text-decoration: none;
+    
+}
+	/*
+	.about h2{
 		color: #000;
 		-webkit-text-stroke: 1px #fff;
 		font-style: oblique;
 		font-weight: 400;
-		font-size: 50px;
-		line-height: 60px;
-		-webkit-animation: Two 7s ease forwards;
-		-o-animation: Two 7s ease forwards;
-		animation: Two 7s ease forwards;
-
-
-
+		font-size: 40px;
+		margin: 0px auto 30px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    padding-top: 10px;
 	}
-	.About p{
+		-webkit-animation: About 7s ease forwards;
+		-o-animation: About 7s ease forwards;
+		animation: About 7s ease forwards;
+	.about hr{
+
+    height: 4px;
+    border: none;
+    background: #d17700;
+    width: 180px;
+    margin: 0 auto 32px;
+    opacity: 1;
+    
+}
+		
+
+
+	
+	.about p{
 		font-size: 16px;
 		color: #fff;
 		padding-top: 65px;
@@ -324,15 +437,15 @@
 		text-align: center;
 		letter-spacing: 0.5px;	
 		line-height: 20px;
-		/*
-		-webkit-animation: Aboutp 4.4s ease forwards;
-		-o-animation: Aboutp 4.4s ease forwards;
-		animation: Aboutp	4.4s ease forwards;
+		
+		-webkit-animation: about 4.4s ease forwards;
+		-o-animation: aboutp 4.4s ease forwards;
+		animation: aboutp	4.4s ease forwards;
 		opacity: 0;
-		*/
+		
 	}
 
-	.About input{
+	.about input{
 		color: #fff;
 		text-align: center;
 		border: 4px solid #fff;
@@ -343,25 +456,25 @@
 		font-size: 16px;
 		transition: all 0.2s;
 		transform: scale(1);
-		/*
+		
 		-webkit-animation: th 6.4s ease forwards;
 		-o-animation: th 6.4s ease forwards;
 		animation: th 6.4s ease forwards;
 		opacity: 0;
-		*/
+		
 
 	}
 
 	
-	.About input:hover{
+	.about input:hover{
 		background: #fff;
 		color: #000;	
 	}
-	.About input:active{
+	.about input:active{
 		transform: scale(1.1);
 	}
 
-	@keyframes About{
+	@keyframes aboutt{
 		from{
 			opacity: 0;
 			
@@ -372,7 +485,7 @@
 		}
 	}
 	/*
-	@keyframes Aboutp{
+	@keyframes aboutp{
 		from{
 			opacity: 0;
 			margin-left: -440px;	
@@ -391,16 +504,16 @@
 			opacity: 1;
 			margin-left: 0px;			
 		}
-	}*/
-	.About input:hover{
+	}
+	.about input:hover{
 		background: #fff;
 		color: #000;	
 	}
 
 
-	.About p:nth-child(2){
+	.about p:nth-child(2){
 		animation-delay: 2s;
-	}
+	}*/
 	.Three{
 		background:url(../img/3.jpg) center/cover no-repeat;
 		height: 700px;
@@ -487,6 +600,14 @@
     margin: 0px auto 50px;
     
 }
+.calculator_container hr{
+	height: 4px;
+    border: none;
+    background: #d17700;
+    width: 180px;
+    margin: 0 auto 32px;
+    opacity: 1;
+}
 .calculator_inner{
     max-width: 890px;
     margin: 0 auto;
@@ -536,6 +657,7 @@
 
     
 }
+
 .calculator_footer p{
     margin-bottom: 0;
 }
@@ -714,7 +836,7 @@
 			color: #fff;
 			text-align: center;
 			letter-spacing: 0.5px;	
-		}
+		}/*
 		footer{
 			background: url(../img/3.jpg);
 			height: 1000px;
@@ -811,4 +933,101 @@
 			display: block;
 			max-width: 100%;
 			height: 100%;
-		}
+		}*/
+.contacts{
+   		background: url(../img/3.jpg) center/cover no-repeat;
+    	color: white;
+}
+
+.contacts_container{
+    padding-bottom: 68px;
+}
+
+.contacts_container h2{
+    text-align: center;
+    max-width: 390px;
+   color: #000;
+		-webkit-text-stroke: 1px #fff;
+		font-style: oblique;
+		font-weight: 400;
+		font-size: 50px;
+    margin: 0px auto 30px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    padding-top: 100px;
+}
+
+.contacts_container hr{
+    height: 4px;
+    border: none;
+    background: #d17700;
+    width: 180px;
+    margin: 0 auto 32px;
+    opacity: 1;
+    
+}
+
+.contacts_subscription{
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 48px;
+}
+
+.contacts_data_item{
+
+}
+
+.contacts_data_item img{
+    height: 24px;
+    margin-bottom: 16px;
+    
+}
+
+.contacts_data_item p{
+    font-size: 16px;
+}
+
+.contacts_container h3{
+    margin-top: 40px;
+    text-align: center;
+    margin-bottom: 46px;
+    font-size: 21px;
+    text-transform: uppercase;
+}
+
+.contacts_inputs input{
+    height: 34px;
+    margin-bottom: 14px;
+    background: rgba(210, 214, 220, 0.93);
+    font-size: 16px;
+    width: 100%;
+    padding-left: 15px;
+}
+
+.contacts_inputs .secondInput{
+    float: right;
+}
+
+.contacts_container textarea{
+    display: block;
+    width: 100%;
+    resize: none;
+    padding-top: 10px;
+    padding-left: 15px;
+    background: rgba(220, 224, 230, 0.93);
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.contacts_container input[type="submit"]{
+    display: block;
+    margin: 0 auto;
+    background: none;
+    color: white;
+    border: 2px solid white;
+    height: 46px;
+    width: 124px;
+    border-radius: 8px;
+    font-size: 20px;
+    margin-bottom: 76px;
+}

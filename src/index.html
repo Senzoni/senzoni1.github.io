@@ -16,10 +16,10 @@
 </head>
 <body>
   
-<!--
+
 <div class="loaderArea">
   <div class="loader"></div>
-</div>-->
+</div>
  <!-- <div class="preloader">
     <div class="preloader__row">
       <div class="preloader__item"></div>
@@ -51,14 +51,18 @@
                   <li><a class = nav__link href="#">Обо мне</a></li>
                   <li><a class = nav__link href="#">Услуги</a></li>
                   <li><a class = nav__link href="#">Прайс</a></li>
-                  <li><a class = nav__link href="#Contact">Контакты</a></li>
+                  <li><a class = nav__link href="#contacts">Контакты</a></li>
                 </ul> </div>
               </div>
               <div class="col-5 d-flex d-lg-none flex-column justify-content-center align-items-end">
-                <div class="dropdown">
+               <!-- <div class="dropdown">
                   <a class="btn btn-outline-secondary dropdown-toggle white-btn" href="#"      role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                     Навигация
-                  </a>
+                  </a>-->
+                  <div class="dropdown">
+                    <a href="#" class="menu-btn">
+                      <span></span>
+                    </a>
                   <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                     <li><a class="dropdown-item" href="#">Обо мне</a></li>
                     <li><a class="dropdown-item" href="#">Услуги</a></li>         
@@ -83,7 +87,7 @@
                   <h1> Привет <br> Я Иван Макаров </h1>
                   <div class="row justify-content-center">
                     <div class="col-xxl-10">
-                      <h4><i class="fa fa-css3 custom-ccs3" aria-hidden="true" ></i> Фронт-энд веб-разработчкик</h4>
+                      <h4><i class="fa fa-css3 custom-ccs3" aria-hidden="true" ></i> Фулл стек веб-разработчкик</h4>
                       <input type="button" value="Мои работы">
                       <input type="button" value="Нанять меня">
                     </div></div>
@@ -93,34 +97,19 @@
               </section>
             </main>
 
-            <section class="About section">
-              <div class="container">
-                <div class="row">
-                  <div class="col-5 "></div>
-                  <div class="col-xxl-2 col-lg-3 col-7"><h2>Обо мне</h2></div>
+            <section class="about section">
+              <div class="about_container container">
+               <div class="row justify-content-center">
+               <div class="col-12 col-sm-10 col-md-8">
+                   <h2>Обо мне</h2>
+                <hr>
+                <div class="element-animation">
+                <p class="firstText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias voluptatibus quas ducimus hic, tenetur harum sapiente. Maxime officia, esse aliquid.</p>
+                <p class="secondText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus modi commodi ea vel necessitatibus maiores nemo quis tempore velit consequatur.</p>
+                <a href="#">Скачать резюме</a>
+               </div></div>
                 </div>
-              </div>
-              <div class="element-animation">
-              <div class="container">
-                <div class="row">
-                  <div class="col-2"></div>
-                  <div class="col-xxl-8 col-lg-11 col-24"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, saepe corporis adipisci inventore, ipsam porro libero! Omnis, sit, ea.Praesentium accusamus nulla corrupti illum veniam assumenda!</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt perferendis a et sit obcaecati maiores eaque quia temporibus dolorem!</p></div>
-                  </div>
-                </div>
-
-                <table border="3" width="10%">
-                  <div class="container ">
-                    <div class="row">
-                      <div class="col-5"></div>
-                      <div class="col-xxl-2 col-lg-3 col-7"><input type="button" value="скачать резюме"></div>
-                    </div>
-                  </div>
-
-
-
-                </table>
-              </div>
+            </div>
             </section>
             
           <section class="Three section">
@@ -170,6 +159,7 @@
                 <section class="calculator section">
             <div class="calculator_container container">
                 <h2>Расчет стоимости</h2>
+                <hr>
                 <div class="calculator_inner">
                     <h3>Тип Сайта</h3>
                     <select id="select1" class="mySelect" name="type" id="typeSite">
@@ -292,7 +282,45 @@
                 </div>
               </div>
             </section>
-              <footer id="Contact" class="section">
+            <footer class="contacts section" id="contacts">
+            <div class="contacts_container container">
+                <h2>Мои Контакты</h2>
+                <hr>
+                <p class="contacts_subscription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique ea cum error commodi at obcaecati!</p>
+                <div class="contacts_data row justify-content-center text-center">
+                    <div class="contacts_data_item col-12 col-md-4 col-lg-3">
+                        <img src="img/geo.png" alt="">
+                        <p>Moscow</p>
+                    </div>
+                    <div class="contacts_data_item col-12 col-md-4 col-lg-3 mt-4 mt-md-0">
+                        <img src="img/mail.png" alt="">
+                        <p>@mail.ru</p>
+                    </div>
+                    <div class="contacts_data_item col-12 col-md-4 col-lg-3 mt-4 mt-md-0">
+                        <img src="img/tel.png" alt="">
+                        <p>+7 999-999-99-99</p>
+                    </div>
+                </div>
+
+                <h3>Оставьте мне сообщение</h3>
+                <form action="#">
+                    <div class="contacts_inputs row justify-content-center text-center">
+                        <div class="col-12 col-sm-4 "><input type="text" placeholder="Имя"></div>
+                        <div class="col-12 col-sm-4 "><input class="secondInput " type="text" placeholder="Email"></div>
+
+
+                    </div>
+                    <div class="row justify-content-center text-center">
+                        <div class="col-12 col-sm-8">
+                            <textarea placeholder="Сообщение" name="message" id="messageText" cols="30" rows="10"></textarea>
+                        </div>
+                    </div>
+
+                    <input type="submit" value="Отправить">
+                </form>
+              </div>
+              </footer >
+              <!--<footer id="Contact" class="section">
                 <div class="container"> 
                   <div class="row"> 
                       <div class="col-4"> </div>
@@ -325,7 +353,7 @@
                 </div></div>
               </div>
               </div>
-              </footer>
+              </footer>-->
               <script src="js/jquery-3.6.0.min.js"></script>
               <script src="js/bootstrap.bundle.min.js"></script>
               <script src="js/myScript.js"></script>
