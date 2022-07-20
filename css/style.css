@@ -148,25 +148,36 @@
 	}
 	.menu-btn span,
 	.menu-btn span::before,
-	.menu_btn span::after  {
+	.menu-btn span::after  {
 		position: absolute;
 		top: 50%;margin-top: -1px;
 		left: 50%;margin-left: -10px;
 		width: 20px;
 		height: 2px;
-		background-color: #000;
+		background-color: #222;
 
 	}
 
 	.menu-btn span::before,
-	.menu_btn span::after{
+	.menu-btn span::after{
 		content: '';
 	}
 	.menu-btn span::before {
 		transform: translateY(-5px);
 	}
-	.menu_btn span::after {
+	.menu-btn span::after {
 		transform: translateY(5px);
+	}
+
+	.menu-btn_active span{
+		height: 0;
+	}
+	.menu-btn_active span:before{
+		transform: rotate(45deg);
+	}
+
+	.menu-btn_active span:after{
+		transform: rotate(-45deg);
 	}
 
 	/*

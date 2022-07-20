@@ -1,5 +1,7 @@
 	$(document).ready(function(){
 
+
+
 	$(window).scroll(( ) => {
 		let scrollDistance = $(window).scrollTop();
 /*Чтобы навигация показывала на каком блоке*/
@@ -57,5 +59,11 @@ $('a[href^="#"]').click(function(){
 		$('html, body').animate({scrollTop: $(valHref).offset().top - 50 + "px"});
 });
 
+/*Бургер*/
+
+$('menu-btn').on('click', function(e) {
+	e.preventDefault;
+	$(this).toggleClass('menu-btn_active');
+});
 
 
