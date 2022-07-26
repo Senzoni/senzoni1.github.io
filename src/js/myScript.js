@@ -60,10 +60,39 @@ $('a[href^="#"]').click(function(){
 });
 
 /*Бургер*/
+const nav = document.querySelector('.nav');
+nav.addEventListener('click',(event) => {
+    nav.classList.toggle('open');
+});
+/*Бургер*//*
 
-$('menu-btn').on('click', function(e) {
+$('.menu-btn').on('click', function(e) {
 	e.preventDefault;
 	$(this).toggleClass('menu-btn_active');
-});
+});*/
+
+/*Бегающие цифры статистики*/
+     let optionsStat = {
+            threshold: [0.5]
+        };
+        let observerStat = new IntersectionObserver(onEntryStat, optionsStat);
+        let elementsStat = $('.statAnimation');
+
+        elementsStat.each((i, el) => {
+            observerStat.observe(el);
+        });
 
 
+        function onEntryStat(entry) {
+            entry.forEach(change => {
+                if (change.isIntersecting) {
+                    if(!$('.statAnimation').hasClass("done")){
+                        $('.statAnimation').addClass("done");
+                        $('.statAnimation').spincrement({
+                         thousandSeparator: "",
+                         duration: 3000
+                    });
+                  }
+                }
+            });
+        }    
